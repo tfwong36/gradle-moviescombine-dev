@@ -50,7 +50,7 @@ public class MovieControllerTest {
 
         //when
         //then
-        mockMvc.perform(MockMvcRequestBuilders.get("http://localhost/movies?showing=true"))
+        mockMvc.perform(MockMvcRequestBuilders.get("https://dev-moviescombine-api.herokuapp.com/movies?showing=true"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id").isString())
